@@ -12,9 +12,12 @@ class PersonTest {
         // act
         final var fullName = jan.getFullName();
         Assertions.assertAll(
-                () -> Assertions.assertTrue(fullName.startsWith("Jan")),
-                () -> Assertions.assertTrue(fullName.contains(" ")),
-                () -> Assertions.assertTrue(fullName.endsWith("Kowalski")));
+                () -> Assertions.assertTrue(fullName.startsWith("Jan"),
+                        "Jan should be at start of full name"),
+                () -> Assertions.assertTrue(fullName.contains(" "),
+                        "Whitespace should be in the middle of name and last name"),
+                () -> Assertions.assertTrue(fullName.endsWith("Kowalski"),
+                        "Kowalski should be at the end of full name"));
     }
 
     private static class Person {
