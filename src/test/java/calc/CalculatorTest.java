@@ -1,6 +1,7 @@
 package calc;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
@@ -15,6 +16,13 @@ class CalculatorTest {
     @Test
     void divisionTest() {
         Assertions.assertEquals(2, calc.division(2, 1));
+    }
+
+    @Test
+    void arithmeticExceptionIsThrownWhenTriesToDivideByZero() {
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            calc.division(2, 0);
+        });
     }
 
 }
