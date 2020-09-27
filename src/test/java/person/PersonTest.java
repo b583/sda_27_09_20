@@ -1,4 +1,4 @@
-package sda;
+package person;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -20,19 +20,6 @@ class PersonTest {
                         "Whitespace should be in the middle of name and last name"),
                 () -> Assertions.assertTrue(fullName.endsWith("Kowalski"),
                         "Kowalski should be at the end of full name"));
-    }
-
-    private static class Person {
-        private String name, lastName;
-
-        private Person(String name, String lastName) {
-            this.name = name;
-            this.lastName = lastName;
-        }
-
-        private String getFullName() {
-            return name + " " + lastName;
-        }
     }
 
 }
