@@ -9,6 +9,8 @@ class FailTest {
     void failedTest() {
         // something something
         Assertions.fail("failed manually");
+
+        Assertions.assertTrue(true);
     }
 
 }
