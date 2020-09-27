@@ -12,4 +12,9 @@ class CalculatorTest {
         Assertions.assertEquals(4, calc.sum(2, 2));
     }
 
+    @Test
+    void divisionTest() {
+        Assertions.assertEquals(2, calc.division(2, 1));
+    }
+
 }
