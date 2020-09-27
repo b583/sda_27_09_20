@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 class PersonTest {
 
+    final String fullName = new Person("Jan", "Kowalski").getFullName();
+
     @Test
     @DisplayName("Full name should be name + space + last name")
     void checkFullNameTest() {
@@ -20,6 +22,21 @@ class PersonTest {
                         "Whitespace should be in the middle of name and last name"),
                 () -> Assertions.assertTrue(fullName.endsWith("Kowalski"),
                         "Kowalski should be at the end of full name"));
+    }
+
+    @Test
+    void checkFirstName() {
+        Assertions.assertTrue(fullName.startsWith("Jan"));
+    }
+
+    @Test
+    void checkSpace() {
+        Assertions.assertTrue(fullName.contains(" "));
+    }
+
+    @Test
+    void checkLastName() {
+        Assertions.assertTrue(fullName.endsWith("Kowalski"));
     }
 
 }
