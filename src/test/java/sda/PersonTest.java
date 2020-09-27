@@ -1,11 +1,13 @@
 package sda;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class PersonTest {
 
     @Test
+    @DisplayName("Full name should be name + space + last name")
     void checkFullNameTest() {
         // arrange
         final var jan = new Person("Jan", "Kowalski");
